@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Fact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .fact {
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Fact</h1>
+        <div id="fact" class="fact"></div>
+        <button id="newFactBtn">Show Another Fact</button>
+    </div>
+    <script>
+        const facts = [
+            {
+                "id": 1,
+                "topic": "Science",
+                "fact": "Water can exist in three states: solid, liquid, and gas."
+            },
+            {
+                "id": 2,
+                "topic": "Astronomy",
+                "fact": "A day on Venus is longer than a year on Venus."
+            },
+            {
+                "id": 3,
+                "topic": "Biology",
+                "fact": "Humans share 60% of their DNA with bananas."
+            },
+            {
+                "id": 4,
+                "topic": "Technology",
+                "fact": "The first computer virus was created in 1983 and was called 'Elk Cloner'."
+            },
+            {
+                "id": 5,
+                "topic": "Geography",
+                "fact": "Mount Everest grows about 4 millimeters every year due to geological uplift."
+            },
+            {
+                "id": 6,
+                "topic": "History",
+                "fact": "Cleopatra lived closer in time to the first Moon landing than to the construction of the Great Pyramid."
+            },
+            {
+                "id": 7,
+                "topic": "Language",
+                "fact": "There are over 7,000 languages spoken in the world today."
+            },
+            {
+                "id": 8,
+                "topic": "Animals",
+                "fact": "Octopuses have three hearts and blue blood."
+            },
+            {
+                "id": 9,
+                "topic": "Food",
+                "fact": "Honey never spoils; archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still edible."
+            },
+            {
+                "id": 10,
+                "topic": "Art",
+                "fact": "Vincent van Gogh only sold one painting during his lifetime."
+            }
+        ];
+
+        function getRandomFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            return facts[randomIndex].fact;
+        }
+
+        document.getElementById('fact').innerText = getRandomFact();
+
+        document.getElementById('newFactBtn').addEventListener('click', function() {
+            document.getElementById('fact').innerText = getRandomFact();
+        });
+    </script>
+</body>
+</html>
