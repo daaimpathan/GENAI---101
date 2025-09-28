@@ -1,0 +1,25 @@
+{
+  "name": "skillbridge-mvp",
+  "version": "1.0.0",
+  "description": "SkillBridge - Modern Placement & Internship Portal",
+  "scripts": {
+    "dev": "./start-dev.sh",
+    "install-all": "cd skillbridge-backend && npm install && cd ../skillbridge-frontend && npm install",
+    "build": "cd skillbridge-frontend && npm run build",
+    "start-backend": "cd skillbridge-backend && npm run dev",
+    "start-frontend": "cd skillbridge-frontend && npm start",
+    "test": "cd skillbridge-frontend && npm test"
+  },
+  "keywords": [
+    "placement",
+    "internship",
+    "jobs",
+    "students",
+    "react",
+    "nodejs",
+    "express",
+    "sqlite"
+  ],
+  "author": "SkillBridge Team",
+  "license": "MIT"
+}
